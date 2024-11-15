@@ -50,7 +50,7 @@ if ( $vars{action} eq 'create' ) {
     my $browser = LWP::UserAgent->new( timeout => 10 );
     $browser->default_header('Crypto-Pay-API-Token' => $api_key, 'User-Agent' => 'SHM');
 
-    my $response = $browser->post('https://pay.crypt.bot/api/createInvoice',
+    my $response = $browser->post('https://testnet-pay.crypt.bot/api/createInvoice',
         Content => {
             amount =>  $vars{amount},
             currency_type => "fiat",
